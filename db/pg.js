@@ -6,6 +6,9 @@ const pool = new Pool({
   database: process.env.PGDB,
   password: process.env.PGPASSWORD,
   port: process.env.PGPORT,
+  ssl: {
+    rejectUnauthorized: false
+  }
 })
 
 async function getRecipes(){
