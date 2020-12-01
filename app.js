@@ -98,7 +98,11 @@ app.post('/deleterecipe', async (req, res) => {
 	if (photosArray.photos.length != 0){
 		photosArray.photos.forEach(photo => {
 			fs.unlink('uploads/photos/' + photo, (err) => {
-			  if (err) throw err;
+			  if (err) {
+			  	if(err.code != 'ENOENT'){
+			  		throw err;
+			  	}
+			  };
 			  console.log('uploads/photos/' + photo + ' was deleted');
 			});
 		})
