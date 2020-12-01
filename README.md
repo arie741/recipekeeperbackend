@@ -4,7 +4,11 @@ The Node js Application for serving Recipe Keeper App's backend.
 
 ## How to run
 
-In the project directory, you can run:
+First, clone this repo
+
+### `git clone https://github.com/arie741/recipekeeperbackend.git`
+
+then, in the project directory, run:
 
 ### `npm install`
 
